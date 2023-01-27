@@ -8,8 +8,8 @@ function App() {
       <h1 className='text-3xl font-bold underline'>
         Hello world!
       </h1>
-      <footer className='bg-gradient-to-t bg-black/10 text-xl text-white backdrop-blur-lg text-center fixed inset-x-0 bottom-0'>
-        <div class="grid grid-cols-3 gap-0 m-5">
+      <footer className='bg-gradient-to-t bg-black/10 text-white backdrop-blur-lg text-center fixed inset-x-0 bottom-0'>
+        <div class="grid grid-cols-3 gap-0 m-5 text-2xl">
           <div className='mx-auto'><AiFillHome/></div>
           <div className='mx-auto'><FiSearch/></div>
           <div className='mx-auto'><BiLibrary/></div>
