@@ -2,12 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+/* html {
   height: -webkit-fill-avaliable;
 }
 
 body {
   height: -webkit-fill-avaliable;
+} */
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
 }
 
 /* :root {
