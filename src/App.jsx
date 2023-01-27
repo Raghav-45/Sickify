@@ -4,7 +4,7 @@ function App() {
       <h1 className='text-3xl font-bold underline'>
         Hello world!
       </h1>
-      <footer className='bg-gradient-to-t from-black text-xl text-white backdrop-blur-lg text-center fixed inset-x-0 bottom-0 p-5'>
+      <footer className='bg-gradient-to-t from-black/20 text-xl text-white backdrop-blur-lg text-center fixed inset-x-0 bottom-0 p-5'>
         This is sticky fixed Footer.
       </footer>
     </div>
