@@ -10,7 +10,7 @@ export const MusicCard = ((props) => {
   return (
     <div className="group p-2 w-48 relative">
       <div className="bg-light w-full h-auto p-4 rounded-xl shadow-md">
-        <div className='relative aspect-square w-full shadow-[0_0px_24px_rgb(0,0,0,50%)] mb-3 overflow-hidden rounded-lg'>
+        <div className='relative aspect-square w-full shadow-[0_8px_24px_rgb(0,0,0,50%)] mb-3 overflow-hidden rounded-lg'>
           <div className='absolute playButton bg-green-500 rounded-full h-10 w-10 m-2 flex right-0 bottom-0 items-center justify-center transition opacity-0 group-hover:opacity-100 translate-y-7 group-hover:-translate-y-0'>
             <button onClick={props.onPlayButton} ><FaPlay className='text-white text-1xl'/></button>
           </div>
