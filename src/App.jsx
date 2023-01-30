@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className='h-[100vh] bg-center bg-dark'>
-      <div className='flex text-white h-auto w-full px-2 pt-2 pb-2 bg-gradient-to-b from-[#0071FF]/50 to-dark'>
+      <div className='flex text-white h-auto w-full px-2 pt-2 pb-2 bg-gradient-to-b from-[#0071FF]/20 to-dark'>
         <div className='flex-1 text-2xl font-bold align-middle items-center'>
           <h1>
             Good {greetByTime()}!
