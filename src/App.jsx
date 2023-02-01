@@ -27,6 +27,8 @@ function App() {
     return 'Evening'
   }
 
+  setTrackData({TrackName: 'Title', ArtistName: 'Artist', Poster: 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png', YTid: '-Xx0xnlBVzc'})
+
   return (
     <div className='h-[100vh] bg-center bg-dark'>
       <div className='flex text-white h-auto w-full px-2 pt-2 pb-2 bg-gradient-to-b from-white/10 to-dark'>
@@ -66,11 +68,6 @@ function App() {
           <MusicCard Name={elem.title} Artist={elem.artists[0].name} Image={elem.thumbnails[elem.thumbnails.length - 1].url} onPlayButton={() => {setTrackData({TrackName: elem.title, ArtistName: elem.artists[0].name, Poster: elem.thumbnails[0].url, YTid: elem.videoId})}} />
         ))}
       </div>
-
-      {/* <h1 className='text-green-500'>{TrackData.TrackName}</h1>
-      <h1 className='text-green-500'>{TrackData.ArtistName}</h1>
-      <h1 className='text-green-500'>{TrackData.Poster}</h1>
-      <h1 className='text-green-500'>{TrackData.YTid}</h1> */}
 
       <YTPlayer/>
       <footer className='bg-gradient-to-t from-dark backdrop-blur-lg text-white fixed inset-x-0 bottom-0'>
