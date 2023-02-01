@@ -6,8 +6,8 @@ export const YTPlayer = ((props) => {
   const { TrackData, MusicSourceURL, IsPlaying, setMusicDuration, setMusicCurrentTime } = PlayerContext()
 
   const opts = {
-    height: '72px',
-    width: '128px',
+    height: '32px',
+    width: '32px',
     playerVars: {
       autoplay: 1,
     },

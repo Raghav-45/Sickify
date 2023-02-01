@@ -37,6 +37,7 @@ function App() {
             Good {greetByTime()}!
           </h1>
         </div>
+        <YTPlayer/>
         <AvatarIcon/>
       </div>
 
@@ -69,7 +70,6 @@ function App() {
         ))}
       </div>
 
-      <YTPlayer/>
       <div className='h-[1000px]'></div>
       <footer className='bg-gradient-to-t from-dark backdrop-blur-lg text-white fixed inset-x-0 bottom-0'>
         <div className='px-2 pt-2'>
