@@ -69,7 +69,9 @@ function App() {
           <MusicCard Name={elem.title} Artist={elem.artists[0].name} Image={elem.thumbnails[elem.thumbnails.length - 1].url} onPlayButton={() => {setTrackData({TrackName: elem.title, ArtistName: elem.artists[0].name, Poster: elem.thumbnails[0].url, YTid: elem.videoId})}} />
         ))}
       </div>
-      
+
+      <div className='h-[250px]'></div>
+
       <footer className='bg-gradient-to-t from-dark backdrop-blur-lg text-white fixed inset-x-0 bottom-0'>
         <div className='px-2 pt-2'>
           <div className='flex h-14 w-full p-2 bg-dark/80 align-middle items-center overflow-hidden rounded-xl backdrop-blur-lg'>
