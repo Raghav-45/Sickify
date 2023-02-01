@@ -19,7 +19,7 @@ export const YTPlayer = ((props) => {
 
   return (
     // load the YouTube player
-    <ReactPlayer style={{display: 'none'}} url={`https://music.youtube.com/watch?v=${TrackData.YTid}`} height={opts.height} width={opts.width} playing={IsPlaying} onPause={setIsPlaying(true)} controls={false} onDuration={(e) => setMusicDuration(e)} muted={false} onProgress={(e) => setMusicCurrentTime(e.playedSeconds)} />
+    <ReactPlayer style={{display: 'none'}} url={`https://music.youtube.com/watch?v=${TrackData.YTid}`} height={opts.height} width={opts.width} playing={IsPlaying} onStart={setIsPlaying(false)} onPause={setIsPlaying(true)} controls={false} onDuration={(e) => setMusicDuration(e)} muted={false} onProgress={(e) => setMusicCurrentTime(e.playedSeconds)} />
   )
 })
 YTPlayer.displayName = 'YTPlayer'
