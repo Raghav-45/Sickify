@@ -27,7 +27,7 @@ function App() {
     return 'Evening'
   }
 
-  // setTrackData({TrackName: 'Title', ArtistName: 'Artist', Poster: 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png', YTid: '-Xx0xnlBVzc'})
+  setTrackData({TrackName: 'Title', ArtistName: 'Artist', Poster: 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png', YTid: '-Xx0xnlBVzc'})
 
   return (
     <div className='h-[100vh] bg-center bg-dark'>
