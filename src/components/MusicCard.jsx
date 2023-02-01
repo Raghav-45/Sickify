@@ -15,8 +15,8 @@ export const MusicCard = ((props) => {
           </div>
           <img src={Image} className='h-full w-full' />
         </div>
-        <h1 className='text-sm font-semibold text-white tracking wide whitespace-nowrap overflow-x-hidden text-ellipsis'>{Name}</h1>
-        <h2 className='text-xs text-lightest tracking-wide pb-0'>{Artist}</h2>
+        <h1 className='text-sm text-white font-semibold tracking wide whitespace-nowrap overflow-x-hidden text-ellipsis'>{Name}</h1>
+        <h2 className='text-xs text-lightest tracking-wide  whitespace-nowrap overflow-x-hidden text-ellipsis pb-0'>{Artist}</h2>
       </div>
     </div>
   )
