@@ -30,10 +30,16 @@ function App() {
         </div>
         <AvatarIcon/>
       </div>
-      {/* {YT_offline[2].contents.map((elem) => (
-        <MusicCard Name={elem.title} Artist={elem.title} Image={elem.thumbnails[elem.thumbnails.length - 1].url} />
-      ))}
-      <MusicCard Name={'Presenting Arijit Singh'} Artist={'Arijit Singh'} Image={'https://lh3.googleusercontent.com/X2LsGDinExErsug_2nybr0YUqOXPk0aVREvGlZOoMiRIsM4pR-WMqV_rOFIEDfVEMbXTwxjCSJuUNy8=w544-h544-l90-rj'} /> */}
+
+      <div className="flex flex-cols w-full overflow-x-scroll">
+        {/* <div className="flex-none h-[100px] w-[100px]">
+          <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+        </div> */}
+        {YT_offline[2].contents.map((elem) => (
+          <MusicCard Name={elem.title} Artist={elem.title} Image={elem.thumbnails[elem.thumbnails.length - 1].url} />
+        ))}
+      </div>
+
       <YTPlayer/>
       <footer className='bg-gradient-to-t from-dark backdrop-blur-lg text-white text-center fixed inset-x-0 bottom-0'>
         <div className='grid grid-cols-3 gap-0 m-5 text-xl'>
