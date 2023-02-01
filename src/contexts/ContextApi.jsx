@@ -16,7 +16,7 @@ export default function ContextProvider({ children }) {
   const [SearchQuery, setSearchQuery] = useState('')
   const [SearchResults, setSearchResults] = useState({Tracks: [], Artists: [],})
 
-  const [TrackData, setTrackData] = useState({TrackName: 'MusicName', ArtistName: 'ArtistName', Poster: 'TrackPoster', YTid: 'dQw4w9WgXcQ',})
+  const [TrackData, setTrackData] = useState({TrackName: 'MusicName', ArtistName: 'ArtistName', Poster: 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png', YTid: 'dQw4w9WgXcQ',})
   // const [PlayerData, setPlayerData] = useState({IsPlaying: false, TrackDuration: '00:00', TrackCurrentTime: '00:00'},)
 
   const SearchContent = async (q) => {
