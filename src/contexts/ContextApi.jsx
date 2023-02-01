@@ -52,6 +52,7 @@ export default function ContextProvider({ children }) {
     MusicDuration, setMusicDuration,
     MusicCurrentTime, setMusicCurrentTime,
     SearchQuery, setSearchQuery,
+    TrackData, setTrackData,
     SearchResults,
   }
 

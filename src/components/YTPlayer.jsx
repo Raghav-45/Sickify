@@ -3,8 +3,7 @@ import { PlayerContext } from '../contexts/ContextApi'
 import ReactPlayer from 'react-player/youtube'
 
 export const YTPlayer = ((props) => {
-  const VideoID = props.VideoID
-  const { MusicSourceURL, YTPlayer, setYTPlayer, IsPlaying, setIsPlaying, MusicDuration, setMusicDuration, MusicCurrentTime, setMusicCurrentTime } = PlayerContext()
+  const { TrackData, MusicSourceURL, IsPlaying, setMusicDuration, setMusicCurrentTime } = PlayerContext()
 
   const opts = {
     height: '72',
@@ -20,7 +19,7 @@ export const YTPlayer = ((props) => {
 
   return (
     // load the YouTube player
-    <ReactPlayer url={`https://music.youtube.com/watch?v=${MusicSourceURL}`} height={'240px'} width={'100%'} playing={IsPlaying} controls={false} onDuration={(e) => setMusicDuration(e)} muted={false} onProgress={(e) => setMusicCurrentTime(e.playedSeconds)} />
+    <ReactPlayer url={`https://music.youtube.com/watch?v=${TrackData.YTid}`} height={'240px'} width={'100%'} playing={TrackData.IsPlaying} controls={false} onDuration={(e) => setMusicDuration(e)} muted={false} onProgress={(e) => setMusicCurrentTime(e.playedSeconds)} />
   )
 })
 YTPlayer.displayName = 'YTPlayer'
