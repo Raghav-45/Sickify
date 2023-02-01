@@ -40,7 +40,7 @@ export default function ContextProvider({ children }) {
   }
 
   useEffect(() => {
-    let timerOut = setTimeout(() => {SearchContent(SearchQuery)}, 500)
+    let timerOut = setTimeout(() => { !SearchQuery.length==0 ? SearchContent(SearchQuery) : console.log(SearchQuery) }, 500)
     return () => clearTimeout(timerOut)
   }, [SearchQuery])
 

@@ -43,7 +43,7 @@ function App() {
         <AvatarIcon/>
       </div>
 
-      <div class="grid grid-cols-2 gap-2 w-full px-2 pt-2 mb-4">
+      <div className="grid grid-cols-2 gap-2 w-full px-2 pt-2 mb-4">
         <div className='flex h-12 bg-light text-left text-xs align-middle items-center overflow-hidden rounded-md'><img src={gg} className='flex-none aspect-square h-full w-auto' /><h1 className='flex-1 font-semibold text-white ml-2'>Discover</h1></div>
         <div className='flex h-12 bg-light text-left text-xs align-middle items-center overflow-hidden rounded-md'><img src={gg} className='flex-none aspect-square h-full w-auto' /><h1 className='flex-1 font-semibold text-white ml-2'>Zombie</h1></div>
         <div className='flex h-12 bg-light text-left text-xs align-middle items-center overflow-hidden rounded-md'><img src={gg} className='flex-none aspect-square h-full w-auto' /><h1 className='flex-1 font-semibold text-white ml-2'>Happy Mix</h1></div>
