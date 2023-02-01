@@ -4,6 +4,7 @@ import { FiSearch } from 'react-icons/fi'
 import { BiLibrary } from 'react-icons/bi'
 import { AvatarIcon } from './components/avatar'
 import { MusicCard } from './components/MusicCard'
+import { YTPlayer } from './components/YTPlayer'
 
 function App() {
   const greetByTime = () => {
@@ -28,6 +29,7 @@ function App() {
         <AvatarIcon/>
       </div>
       <MusicCard Name='Presenting Arijit Singh' Artist='Arijit Singh' Image='https://lh3.googleusercontent.com/X2LsGDinExErsug_2nybr0YUqOXPk0aVREvGlZOoMiRIsM4pR-WMqV_rOFIEDfVEMbXTwxjCSJuUNy8=w544-h544-l90-rj' />
+      <YTPlayer/>
       <footer className='bg-gradient-to-t from-dark backdrop-blur-lg text-white text-center fixed inset-x-0 bottom-0'>
         <div className='grid grid-cols-3 gap-0 m-5 text-xl'>
           <div className='mx-auto'><AiFillHome/></div>
