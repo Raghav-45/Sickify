@@ -1,6 +1,5 @@
 import { AvatarIcon } from './components/avatar'
 import { MusicCard } from './components/MusicCard'
-import { YTPlayer } from './components/YTPlayer'
 import { PlayerContext } from './contexts/ContextApi'
 
 export default function App() {
@@ -20,9 +19,7 @@ export default function App() {
   return (<>
     <div className='flex text-white h-auto w-full px-2 pt-2 pb-2 bg-gradient-to-b from-white/10 to-dark'>
       <div className='flex-1 text-2xl font-bold align-middle items-center tracking-wide'>
-        <h1>
-          Good {greetByTime()}!
-        </h1>
+        <h1>Good {greetByTime()}!</h1>
       </div>
       <AvatarIcon/>
     </div>
