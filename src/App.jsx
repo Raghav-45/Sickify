@@ -30,10 +30,10 @@ function App() {
         </div>
         <AvatarIcon/>
       </div>
-      {YT_offline[2].contents.map((elem) => (
+      {/* {YT_offline[2].contents.map((elem) => (
         <MusicCard Name={elem.title} Artist={elem.title} Image={elem.thumbnails[elem.thumbnails.length - 1].url} />
       ))}
-      <MusicCard Name={'Presenting Arijit Singh'} Artist={'Arijit Singh'} Image={'https://lh3.googleusercontent.com/X2LsGDinExErsug_2nybr0YUqOXPk0aVREvGlZOoMiRIsM4pR-WMqV_rOFIEDfVEMbXTwxjCSJuUNy8=w544-h544-l90-rj'} />
+      <MusicCard Name={'Presenting Arijit Singh'} Artist={'Arijit Singh'} Image={'https://lh3.googleusercontent.com/X2LsGDinExErsug_2nybr0YUqOXPk0aVREvGlZOoMiRIsM4pR-WMqV_rOFIEDfVEMbXTwxjCSJuUNy8=w544-h544-l90-rj'} /> */}
       <YTPlayer/>
       <footer className='bg-gradient-to-t from-dark backdrop-blur-lg text-white text-center fixed inset-x-0 bottom-0'>
         <div className='grid grid-cols-3 gap-0 m-5 text-xl'>
