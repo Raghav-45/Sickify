@@ -81,8 +81,8 @@ function App() {
               <h1 className='text-sm font-semibold text-white'>{TrackData.TrackName}</h1>
               <h2 className='text-xs text-white'>{TrackData.ArtistName}</h2>
             </div>
-            <div className='flex flex-none order-last flex-col mr-2 align-middle' onClick={() => setIsPlaying(!IsPlaying)}>
-              {IsPlaying ? <FaPause/> : <FaPlay/>}
+            <div className='flex flex-none order-last flex-col mr-2 align-middle' onClick={() => setIsPlaying(!TrackData.IsPlaying)}>
+              {TrackData.IsPlaying ? <FaPause/> : <FaPlay/>}
             </div>
           </div>
         </div>
