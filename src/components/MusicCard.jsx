@@ -2,7 +2,6 @@ import * as React from 'react'
 import { FaPlay } from "react-icons/fa"
 
 export const MusicCard = ((props) => {
-  const elem = props.Data
   const Image = props.Image
   const Name = props.Name
   const Artist = props.Artist
