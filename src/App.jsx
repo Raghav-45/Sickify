@@ -30,7 +30,7 @@ function App() {
   // setTrackData({TrackName: 'Title', ArtistName: 'Artist', Poster: 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png', YTid: '-Xx0xnlBVzc'})
 
   return (
-    <div className='h-screen bg-center bg-dark'>
+    <div className='h-full bg-center bg-dark'>
       <div className='flex text-white h-auto w-full px-2 pt-2 pb-2 bg-gradient-to-b from-white/10 to-dark'>
         <div className='flex-1 text-2xl font-bold align-middle items-center tracking-wide'>
           <h1>
