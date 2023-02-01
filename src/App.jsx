@@ -27,7 +27,7 @@ function App() {
     return 'Evening'
   }
 
-  setTrackData({TrackName: 'Title', ArtistName: 'Artist', Poster: 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png', YTid: '-Xx0xnlBVzc'})
+  // setTrackData({TrackName: 'Title', ArtistName: 'Artist', Poster: 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png', YTid: '-Xx0xnlBVzc'})
 
   return (
     <div className='h-[100vh] bg-center bg-dark'>
@@ -70,6 +70,7 @@ function App() {
       </div>
 
       <YTPlayer/>
+      <div className='h-[1000px]'></div>
       <footer className='bg-gradient-to-t from-dark backdrop-blur-lg text-white fixed inset-x-0 bottom-0'>
         <div className='px-2 pt-2'>
           <div className='flex h-14 w-full p-2 bg-dark/80 align-middle items-center overflow-hidden rounded-xl backdrop-blur-lg'>
