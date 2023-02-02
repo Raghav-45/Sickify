@@ -6,7 +6,7 @@ const Playback = () => {
   const { TrackData, IsPlaying, setIsPlaying } = PlayerContext()
   return (
     <div className='px-2 pt-2'>
-      <div className='flex h-14 w-full p-2 bg-dark/80 align-middle items-center overflow-hidden rounded-xl backdrop-blur-lg'>
+      <div className='flex h-14 w-full p-2 bg-white/20 align-middle items-center overflow-hidden rounded-xl backdrop-blur-lg'>
         <div className='flex-none aspect-square h-full shadow-[0_4px_24px_rgb(0,0,0,50%)] overflow-hidden rounded-lg'>
           <img src={TrackData.Poster} className='h-full w-full'/>
         </div>
