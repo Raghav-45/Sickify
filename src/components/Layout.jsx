@@ -12,7 +12,7 @@ export default function Layout({ children, title = 'Sickify' }) {
 
       {children}
 
-      <div className='h-[250px]'></div>
+      <div className='h-[350px]'></div>
 
       <footer className='bg-gradient-to-t from-dark backdrop-blur-lg text-white fixed inset-x-0 bottom-0'>
         <Playback/>
