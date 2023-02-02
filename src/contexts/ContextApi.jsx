@@ -23,7 +23,7 @@ export default function ContextProvider({ children }) {
   const SearchContent = async (q) => {
     const Result = {Tracks: [], Artists: [],}
     try {
-      const resp = await fetch('https://ytmusicapi.raghavbhai4545.repl.co/search/songs?query=' + q)
+      const resp = await fetch('https://ytmusicapi.adi4545aditya.repl.co/search/songs?query=' + q)
       const data = await resp.json()
       Result.Tracks = data
       console.log(data)
