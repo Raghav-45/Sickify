@@ -1,4 +1,4 @@
-// import { MusicCard } from '../components/MusicCard'
+import { MusicCard } from '../components/MusicCard'
 import { PlayerContext } from '../contexts/ContextApi'
 
 export default function SearchPage() {
@@ -16,11 +16,11 @@ export default function SearchPage() {
       <h1 className='pl-2 text-2xl font-semibold text-white tracking-wider'>Top Results</h1>
       <h2 className='pr-4 pt-4 text-xs text-lightest uppercase tracking-wider mb-3'>See All</h2>
     </div>
-    {/* {!SearchResults.Tracks?.length == 0 ? 
+    {!SearchResults.Tracks?.length == 0 ? 
     <div className="flex flex-row w-full overflow-x-scroll">
       {SearchResults.Tracks.map((elem) => (
         <MusicCard Name={elem.title} Artist={elem.title} Image={elem.thumbnails[elem.thumbnails.length - 1].url} onPlayButton={() => {setTrackData({TrackName: elem.title, ArtistName: elem.artists[0].name, Poster: elem.thumbnails[0].url, YTid: elem.videoId}); setIsPlaying(true);}} />
       ))}
-    </div> : <p>Search Something...</p>} */}
+    </div> : <p>Search Something...</p>}
   </>)
 }
