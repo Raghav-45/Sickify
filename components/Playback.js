@@ -1,5 +1,5 @@
 import { PlayerContext } from '../contexts/ContextApi'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import { FaPlay, FaPause } from "react-icons/fa"
 
@@ -11,13 +11,18 @@ const Playback = () => {
   const { TrackData, IsPlaying, setIsPlaying } = PlayerContext()
   const [ExpandPlayer, setExpandPlayer] = useState(false)
 
+  useEffect(() => {
+    let timerOut = setTimeout(() => { ExpandPlayer ? setExpandPlayer(false) : console.log('SearchQuery') }, 4000)
+    return () => clearTimeout(timerOut)
+  }, [ExpandPlayer])
+
   return (
     <div className='px-2 pt-2'>
-      <div onClick={(e) => {setExpandPlayer(!ExpandPlayer)}} className={`flex ${ExpandPlayer ? 'flex-col' : 'flex-row'} h-14 w-full p-2 bg-white/10 align-middle items-center overflow-hidden rounded-xl backdrop-blur-lg transition-all`}  style={{height: ExpandPlayer ? '18rem' : '3.5rem'}}>
+      <div className={`flex ${ExpandPlayer ? 'flex-col' : 'flex-row'} h-14 w-full p-2 bg-white/10 align-middle items-center overflow-hidden rounded-xl backdrop-blur-lg transition-all`}  style={{height: ExpandPlayer ? '18rem' : '3.5rem'}}>
         <div className='flex-none aspect-square h-full shadow-[0_4px_24px_rgb(0,0,0,50%)] overflow-hidden rounded-lg transition-all duration-100 delay-200' style={{height: ExpandPlayer ? '170px' : '100%'}}>
           <img src={TrackData.Poster} className='h-full w-full'/>
         </div>
-        <div className={`flex flex-1 flex-col ${ExpandPlayer ? 'mt-2' : 'ml-2'} align-middle transition-all duration-100 delay-200`} style={{textAlign: ExpandPlayer ? 'center' : 'left'}}>
+        <div onTouchMove={(e) => {setExpandPlayer(true)}} className={`flex bg-green-500 flex-1 flex-col ${ExpandPlayer ? 'mt-2' : 'ml-2'} align-middle transition-all duration-100 delay-200`} style={{textAlign: ExpandPlayer ? 'center' : 'left'}}>
           <h1 className='text-sm font-semibold text-white'>{TrackData.TrackName}</h1>
           <h2 className='text-xs text-white'>{TrackData.ArtistName}</h2>
         </div>
