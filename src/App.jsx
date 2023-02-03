@@ -11,9 +11,9 @@ export default function App() {
   const greetByTime = () => {
     const d = new Date()
     const hour = d.getHours()
-    if (hour < 12) { return 'morning' }
+    if (hour < 12) { return 'Morning' }
     if (hour < 18) { return 'afternoon' }
-    return 'evening'
+    return 'Evening'
   }
 
   return (<>
