@@ -16,6 +16,17 @@ export default function SearchPage() {
       <h1 className='pl-2 text-2xl font-semibold text-white tracking-wider'>Top Results</h1>
       <h2 className='pr-4 pt-4 text-xs text-lightest uppercase tracking-wider mb-3'>See All</h2>
     </div>
+
+    {/* <div className='flex flex-col justify-center w-2/4 items-center'>
+      <div className='flex items-center'>
+        <button className='text-lg mx-3 text-lightest hover:text-white'><BiShuffle/></button>
+        <button className='text-lightest mx-3 hover:text-white'><BsFillSkipStartFill className='text-2xl'/></button>
+        <button><div className='bg-green-500 hover:bg-green-400 rounded-full h-9 w-9 m-2 flex right-0 bottom-0 items-center justify-center transition opacity-100'><FaPlay className='text-white text-sm'/></div></button>
+        <button className='text-lightest mx-3 hover:text-white'><BsFillSkipEndFill className='text-2xl'/></button>
+        <button className='text-lg mx-3 text-lightest hover:text-white'><FiRepeat/></button>
+      </div>
+    </div> */}
+
     {!SearchResults.Tracks?.length == 0 ? 
     <div className="flex flex-row w-full overflow-x-scroll">
       {SearchResults.Tracks.map((elem) => (
