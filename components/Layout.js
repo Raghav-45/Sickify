@@ -22,7 +22,7 @@ export default function Layout({ children, title = 'Sickify' }) {
           <Link href='/search' className='mx-auto' replace><FiSearch/></Link>
           <Link href='/library' className='mx-auto' replace><BiLibrary/></Link>
         </div>
-        {/* <YTPlayer/> */}
+        <YTPlayer/>
       </footer>
     </div>
   )
