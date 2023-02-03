@@ -10,7 +10,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ContextProvider>
       <Layout>
-        <SearchPage />
+        <App />
       </Layout>
     </ContextProvider>
   </React.StrictMode>,
