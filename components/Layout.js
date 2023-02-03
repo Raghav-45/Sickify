@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Playback from './Playback'
 
 import { AiFillHome } from 'react-icons/ai'
@@ -17,11 +18,11 @@ export default function Layout({ children, title = 'Sickify' }) {
       <footer className='bg-gradient-to-t from-dark backdrop-blur-lg text-white fixed inset-x-0 bottom-0'>
         <Playback/>
         <div className='grid grid-cols-3 gap-0 m-5 text-xl text-center'>
-          <div className='mx-auto'><AiFillHome/></div>
-          <div className='mx-auto'><FiSearch/></div>
-          <div className='mx-auto'><BiLibrary/></div>
+          <Link href='/home' className='mx-auto focus:outline-none'><AiFillHome/></Link>
+          <Link href='/search' className='mx-auto focus:outline-none'><FiSearch/></Link>
+          <Link href='/library' className='mx-auto focus:outline-none'><BiLibrary/></Link>
         </div>
-        <YTPlayer/>
+        {/* <YTPlayer/> */}
       </footer>
     </div>
   )

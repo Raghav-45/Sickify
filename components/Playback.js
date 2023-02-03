@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaPlay, FaPause } from 'react-icons/fa'
 import { PlayerContext } from '../contexts/ContextApi'
 

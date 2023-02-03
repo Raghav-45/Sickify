@@ -1,6 +1,6 @@
-import { AvatarIcon } from './components/avatar'
-import { MusicCard } from './components/MusicCard'
-import { PlayerContext } from './contexts/ContextApi'
+import { AvatarIcon } from '../components/Avatar'
+import { MusicCard } from '../components/MusicCard'
+import { PlayerContext } from '../contexts/ContextApi'
 
 export default function App() {
   const { setTrackData, setIsPlaying } = PlayerContext()
