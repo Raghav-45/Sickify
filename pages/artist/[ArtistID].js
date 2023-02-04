@@ -30,7 +30,7 @@ export default function ArtistPage() {
   return (<>
     <h1 className='text-white'>{data.name}</h1>
 
-    {!data.albums.results?.length == 0 ? <>
+    {/* !data.albums.results?.length == 0 ? <>
       <div className='flex items-center justify-between'>
         <h1 className='pl-2 text-2xl font-semibold text-white tracking-wider'>Albums</h1>
         {/* <h2 className='pr-4 pt-4 text-xs text-lightest uppercase tracking-wider mb-3'>See All</h2> */}
@@ -40,7 +40,7 @@ export default function ArtistPage() {
         {data.albums.results.map((elem) => (
           <MusicCard Name={elem.title} Artist={data.name} Image={elem.thumbnails[elem.thumbnails.length - 1].url} />
         ))}
-      </div></> : <p className='text-white'>Search Something...</p>}
+      </div></> : <p className='text-white'>Search Something...</p> */}
 
     <div>
     {data.songs.results.map((elem) => (
