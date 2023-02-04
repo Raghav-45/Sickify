@@ -38,7 +38,7 @@ export default function ArtistPage() {
       
       <div className="flex flex-row w-full overflow-x-scroll">
         {data.albums.results.map((elem) => (
-          {/* <MusicCard Name={elem.title} Artist={data.name} Image={elem.thumbnails[elem.thumbnails.length - 1].url} /> */}
+          <MusicCard Name={elem.title} Artist={data.name} Image={elem.thumbnails[elem.thumbnails.length - 1].url} />
         ))}
       </div></> : <p className='text-white'>Search Something...</p>}
 
