@@ -8,8 +8,32 @@ import { BsFillSkipStartFill, BsFillSkipEndFill } from "react-icons/bs"
 import { FiRepeat } from "react-icons/fi"
 
 const Playback = () => {
-  const { TrackData, IsPlaying, setIsPlaying } = PlayerContext()
+  const { TrackData, IsPlaying, setIsPlaying, MusicDuration, MusicCurrentTime } = PlayerContext()
   const [ExpandPlayer, setExpandPlayer] = useState(false)
+  const [SeekPos, setSeekPos] = useState('')
+
+  function fancyTimeFormat(duration) {
+    // Hours, minutes and seconds
+    var hrs = ~~(duration / 3600)
+    var mins = ~~((duration % 3600) / 60)
+    var secs = ~~duration % 60
+
+    // Output like "1:01" or "4:03:59" or "123:03:59"
+    var ret = ""
+
+    if (hrs > 0) {
+      ret += "" + hrs + ":" + (mins < 10 ? "0" : "")
+    }
+
+    ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+    ret += "" + secs;
+    return ret;
+  }
+
+  useEffect(() => {
+    setSeekPos(((MusicCurrentTime/MusicDuration)*100))
+    console.log(SeekPos)
+  }, [fancyTimeFormat(MusicCurrentTime)])
 
   useEffect(() => {
     let timerOut = setTimeout(() => { ExpandPlayer ? setExpandPlayer(false) : console.log('SearchQuery') }, 4000)
@@ -18,7 +42,7 @@ const Playback = () => {
 
   return (
     <div className='px-2 pt-2'>
-      <div className={`flex ${ExpandPlayer ? 'flex-col' : 'flex-row'} h-14 w-full p-2 bg-white/10 align-middle items-center overflow-hidden rounded-xl backdrop-blur-lg transition-all`}  style={{height: ExpandPlayer ? '18rem' : '3.5rem'}}>
+      <div className={`relative flex ${ExpandPlayer ? 'flex-col' : 'flex-row'} h-14 w-full p-2 bg-white/10 align-middle items-center overflow-hidden rounded-xl backdrop-blur-lg transition-all`}  style={{height: ExpandPlayer ? '18rem' : '3.5rem'}}>
         <div className='flex-none aspect-square h-full shadow-[0_4px_24px_rgb(0,0,0,50%)] overflow-hidden rounded-lg transition-all duration-100 delay-200' style={{height: ExpandPlayer ? '170px' : '100%'}}>
           <img src={TrackData.Poster} className='h-full w-full'/>
         </div>
@@ -44,6 +68,7 @@ const Playback = () => {
             </div>
           </div>
         }
+        <div className='absolute h-[3px] bottom-0 left-0 rounded-full bg-green-500 w-[0%] transition-all delay-0 duration-300 ease-in-out' style={{ width: `${SeekPos}%` }}></div>
 
       </div>
     </div>
