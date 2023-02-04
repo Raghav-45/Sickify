@@ -68,7 +68,7 @@ const Playback = () => {
             </div>
           </div>
         }
-        <div className='absolute h-[3px] bottom-0 left-0 rounded-full bg-green-500 w-[0%] transition-all delay-0 duration-300 ease-in-out' style={{ width: `${SeekPos}%` }}></div>
+        <div className='absolute h-[3px] bottom-0 left-0 mx-1 rounded-full bg-green-500 w-[0%] transition-all delay-0 duration-300 ease-in-out' style={{ width: `${SeekPos}%` }}></div>
 
       </div>
     </div>
