@@ -1,5 +1,4 @@
 import { ArtistCard } from '../components/ArtistCard'
-import { MusicCard } from '../components/MusicCard'
 import { TrackList } from '../components/TrackList'
 import { PlayerContext } from '../contexts/ContextApi'
 
