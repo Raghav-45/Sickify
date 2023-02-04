@@ -11,6 +11,7 @@ export default function ContextProvider({ children }) {
 
   const [IsPlaying, setIsPlaying] = useState(false)
   const [MusicDuration, setMusicDuration] = useState('00:00')
+  const [BufferDuration, setBufferDuration] = useState('00:00')
   const [MusicCurrentTime, setMusicCurrentTime] = useState('00:00')
   const [IsBuffering, setIsBuffering] = useState(true)
 
@@ -52,6 +53,7 @@ export default function ContextProvider({ children }) {
     IsPlaying, setIsPlaying,
     MusicDuration, setMusicDuration,
     MusicCurrentTime, setMusicCurrentTime,
+    BufferDuration, setBufferDuration,
     IsBuffering, setIsBuffering,
     SearchQuery, setSearchQuery,
     TrackData, setTrackData,

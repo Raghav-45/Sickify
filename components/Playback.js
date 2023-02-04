@@ -8,9 +8,9 @@ import { BsFillSkipStartFill, BsFillSkipEndFill } from "react-icons/bs"
 import { FiRepeat } from "react-icons/fi"
 
 const Playback = () => {
-  const { TrackData, IsPlaying, setIsPlaying, MusicDuration, MusicCurrentTime } = PlayerContext()
+  const { TrackData, IsPlaying, setIsPlaying, MusicDuration, MusicCurrentTime, BufferDuration } = PlayerContext()
   const [ExpandPlayer, setExpandPlayer] = useState(false)
-  const [SeekPos, setSeekPos] = useState('')
+  const [SeekPos, setSeekPos] = useState('0')
 
   function fancyTimeFormat(duration) {
     // Hours, minutes and seconds
@@ -68,7 +68,8 @@ const Playback = () => {
             </div>
           </div>
         }
-        <div className='absolute h-[3px] bottom-0 left-0 mx-1 rounded-full bg-green-500 w-[0%] transition-all delay-0 duration-300 ease-in-out' style={{ width: `${SeekPos}%` }}></div>
+        <div className='absolute h-[3px] bottom-0 left-0 mx-1 z-10 rounded-full bg-white/20 w-[0%] transition-all delay-0 duration-300 ease-in-out' style={{ width: `${((BufferDuration/MusicDuration)*100)}%` }}></div>
+        <div className='absolute h-[3px] bottom-0 left-0 mx-1 z-20 rounded-full bg-green-500 w-[0%] transition-all delay-0 duration-300 ease-in-out' style={{ width: `${SeekPos}%` }}></div>
 
       </div>
     </div>
