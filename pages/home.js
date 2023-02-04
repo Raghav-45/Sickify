@@ -39,7 +39,7 @@ export default function App() {
     </div>
     <div className="flex flex-row w-full overflow-x-scroll">
       {YT_offline[2].contents.map((elem) => (
-        <MusicCard Type='track' Name={elem.title} Artist={elem.title} Image={elem.thumbnails[elem.thumbnails.length - 1].url} />
+        <MusicCard Name={elem.title} Artist={elem.title} Image={elem.thumbnails[elem.thumbnails.length - 1].url} />
       ))}
     </div>
 
@@ -49,7 +49,7 @@ export default function App() {
     </div>
     <div className="flex flex-row w-full overflow-x-scroll">
       {YTKing_offline.map((elem) => (
-        <MusicCard Type='track' Name={elem.title} Artist={elem.artists[0].name} Image={elem.thumbnails[elem.thumbnails.length - 1].url} onPlayButton={() => {setTrackData({TrackName: elem.title, ArtistName: elem.artists[0].name, Poster: elem.thumbnails[0].url, YTid: elem.videoId}); setIsPlaying(true);}} />
+        <MusicCard Name={elem.title} Artist={elem.artists[0].name} Image={elem.thumbnails[elem.thumbnails.length - 1].url} onPlayButton={() => {setTrackData({TrackName: elem.title, ArtistName: elem.artists[0].name, Poster: elem.thumbnails[0].url, YTid: elem.videoId}); setIsPlaying(true);}} />
       ))}
     </div>
   </>)

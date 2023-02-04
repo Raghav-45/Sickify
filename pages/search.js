@@ -1,3 +1,4 @@
+import { ArtistCard } from '../components/ArtistCard'
 import { MusicCard } from '../components/MusicCard'
 import { TrackList } from '../components/TrackList'
 import { PlayerContext } from '../contexts/ContextApi'
@@ -21,7 +22,7 @@ export default function SearchPage() {
       
       <div className="flex flex-row w-full overflow-x-scroll">
         {SearchResults.Artists.map((elem) => (
-          <MusicCard Type={'artist'} Name={elem.artist} Artist='{elem.title}' Image={elem.thumbnails[elem.thumbnails.length - 1].url} onPlayButton={() => {setTrackData({TrackName: elem.title, ArtistName: elem.artists[0].name, Poster: elem.thumbnails[0].url, YTid: elem.videoId}); setIsPlaying(true);}} />
+          <ArtistCard Name={elem.artist} Artist='{elem.title}' Image={elem.thumbnails[elem.thumbnails.length - 1].url} onPlayButton={() => {setTrackData({TrackName: elem.title, ArtistName: elem.artists[0].name, Poster: elem.thumbnails[0].url, YTid: elem.videoId}); setIsPlaying(true);}} />
         ))}
       </div></> : <p className='text-white'>Search Something...</p>}
 
