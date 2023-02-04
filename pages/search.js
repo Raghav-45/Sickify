@@ -1,4 +1,5 @@
 import { MusicCard } from '../components/MusicCard'
+import { TrackList } from '../components/TrackList'
 import { PlayerContext } from '../contexts/ContextApi'
 
 export default function SearchPage() {
@@ -9,29 +10,47 @@ export default function SearchPage() {
 
   return (<>
     <div className='flex text-white h-auto w-full px-2 pt-2 pb-2 bg-gradient-to-b from-white/10 to-dark'>
-      <input className='flex-auto h-9 rounded-full pl-4 text-black' value={SearchQuery} onChange={(e) => {setSearchQuery(e.target.value)}} placeholder='Search...'/>
+      <input className='flex-auto h-8 rounded-full pl-4 text-black' value={SearchQuery} onChange={(e) => {setSearchQuery(e.target.value)}} placeholder='Search...'/>
     </div>
 
-    <div className='flex items-center justify-between'>
-      <h1 className='pl-2 text-2xl font-semibold text-white tracking-wider'>Top Results</h1>
-      <h2 className='pr-4 pt-4 text-xs text-lightest uppercase tracking-wider mb-3'>See All</h2>
-    </div>
-
-    {/* <div className='flex flex-col justify-center w-2/4 items-center'>
-      <div className='flex items-center'>
-        <button className='text-lg mx-3 text-lightest hover:text-white'><BiShuffle/></button>
-        <button className='text-lightest mx-3 hover:text-white'><BsFillSkipStartFill className='text-2xl'/></button>
-        <button><div className='bg-green-500 hover:bg-green-400 rounded-full h-9 w-9 m-2 flex right-0 bottom-0 items-center justify-center transition opacity-100'><FaPlay className='text-white text-sm'/></div></button>
-        <button className='text-lightest mx-3 hover:text-white'><BsFillSkipEndFill className='text-2xl'/></button>
-        <button className='text-lg mx-3 text-lightest hover:text-white'><FiRepeat/></button>
+    {!SearchResults.Artists?.length == 0 ? <>
+      <div className='flex items-center justify-between'>
+        <h1 className='pl-2 text-2xl font-semibold text-white tracking-wider'>Top Results</h1>
+        <h2 className='pr-4 pt-4 text-xs text-lightest uppercase tracking-wider mb-3'>See All</h2>
       </div>
-    </div> */}
+      
+      <div className="flex flex-row w-full overflow-x-scroll">
+        {SearchResults.Artists.map((elem) => (
+          <MusicCard Type={'artist'} Name={elem.artist} Artist='{elem.title}' Image={elem.thumbnails[elem.thumbnails.length - 1].url} onPlayButton={() => {setTrackData({TrackName: elem.title, ArtistName: elem.artists[0].name, Poster: elem.thumbnails[0].url, YTid: elem.videoId}); setIsPlaying(true);}} />
+        ))}
+      </div></> : <p className='text-white'>Search Something...</p>}
+
+    {/* {!SearchResults.Tracks?.length == 0 ? 
+      <div className="flex flex-row w-full overflow-x-scroll">
+        {SearchResults.Tracks.map((elem) => (
+          <MusicCard Type={'track'} Name={elem.title} Artist={elem.title} Image={elem.thumbnails[elem.thumbnails.length - 1].url} onPlayButton={() => {setTrackData({TrackName: elem.title, ArtistName: elem.artists[0].name, Poster: elem.thumbnails[0].url, YTid: elem.videoId}); setIsPlaying(true);}} />
+        ))}
+      </div> : <p className='text-white'>Search Something...</p>} */}
 
     {!SearchResults.Tracks?.length == 0 ? 
-    <div className="flex flex-row w-full overflow-x-scroll">
-      {SearchResults.Tracks.map((elem) => (
-        <MusicCard Name={elem.title} Artist={elem.title} Image={elem.thumbnails[elem.thumbnails.length - 1].url} onPlayButton={() => {setTrackData({TrackName: elem.title, ArtistName: elem.artists[0].name, Poster: elem.thumbnails[0].url, YTid: elem.videoId}); setIsPlaying(true);}} />
-      ))}
-    </div> : <p>Search Something...</p>}
+      <div>
+        {SearchResults.Tracks.map((elem) => (
+          <TrackList Name={elem.title} Artist={elem.artists[0].name} Image={elem.thumbnails[elem.thumbnails.length - 1].url} onPlayButton={() => {setTrackData({TrackName: elem.title, ArtistName: elem.artists[0].name, Poster: elem.thumbnails[0].url, YTid: elem.videoId}); setIsPlaying(true);}} />
+        ))}
+      </div> : <p className='text-white'>Search Something...</p>}
+
+    {/* {!SearchResults.Tracks?.length == 0 ? 
+      <ul role="list" class="px-4 py-6 divide-y divide-slate-200">
+        {SearchResults.Tracks.map((elem) => (
+          <li class="flex py-3 first:pt-0 last:pb-0">
+            <img class="flex-none h-10 w-10 rounded-full" src={elem.thumbnails[elem.thumbnails.length - 1].url} alt="" />
+            <div class="ml-3 overflow-hidden">
+              <p class="text-sm font-medium text-white">{elem.title}</p>
+              <p class="text-sm text-lightest truncate">{elem.title}</p>
+            </div>
+          </li>
+        ))}
+      </ul> : <p className='text-white'>Search Something...</p>} */}
+
   </>)
 }

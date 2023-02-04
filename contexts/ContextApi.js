@@ -30,9 +30,9 @@ export default function ContextProvider({ children }) {
     } catch (error) {console.log(error)}
 
     try {
-      const resp = await fetch('https://api.themoviedb.org/3/search/tv?api_key=b24785488c1326b9c4442d7325d37724&language=en-US&page=1&query=' + q + '&include_adult=false')
+      const resp = await fetch('https://ytmusicapi.adi4545aditya.repl.co/search/artists?query=' + q)
       const data = await resp.json()
-      Result.Artists = data.results
+      Result.Artists = data
       console.log(data)
     } catch (error) {console.log(error)}
 
