@@ -15,16 +15,6 @@ export default function Layout({ children, title = 'Sickify' }) {
 
       <div className='h-[350px]'></div>
 
-      {/* <footer className='bg-gradient-to-t from-dark backdrop-blur-lg text-white fixed inset-x-0 bottom-0'>
-        <Playback/>
-        <div className='grid grid-cols-3 gap-0 m-5 text-xl text-center'>
-          <Link href='/home' className='mx-auto' replace><AiFillHome/></Link>
-          <Link href='/search' className='mx-auto' replace><FiSearch/></Link>
-          <Link href='/library' className='mx-auto' replace><BiLibrary/></Link>
-        </div>
-        <YTPlayer/>
-      </footer> */}
-
       <footer className='bg-gradient-to-t from-dark backdrop-blur-lg text-white fixed inset-x-0 bottom-0'>
         <Playback/>
         <div className='grid grid-cols-3 gap-0 h-14 mx-5 text-xl text-center'>

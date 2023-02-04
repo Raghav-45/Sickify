@@ -6,6 +6,14 @@ export const MusicCard = ((props) => {
   const Name = props.Name
   const Artist = props.Artist
 
+  function ArrayToStr(a) {
+    if (typeof(a) == 'object') {
+      const b = []
+      a.map((e) => b.push(e.name))
+      return b.join(", ")
+    } else { return a }
+  }
+
   return (
     <div className='relative flex-none group p-2 w-48'>
       <div className='bg-light w-full h-auto p-4 rounded-xl shadow-md'>
@@ -16,7 +24,7 @@ export const MusicCard = ((props) => {
           <img src={Image} className='h-full w-full'/>
         </div>
         <h1 className='text-sm text-white font-semibold tracking wide whitespace-nowrap overflow-x-hidden text-ellipsis text-left'>{Name}</h1>
-        <h2 className='text-xs text-lightest tracking-wide whitespace-nowrap overflow-x-hidden text-ellipsis pb-0'>{Artist}</h2>
+        <h2 className='text-xs text-lightest tracking-wide whitespace-nowrap overflow-x-hidden text-ellipsis pb-0'>{ArrayToStr(Artist)}</h2>
       </div>
     </div>
   )

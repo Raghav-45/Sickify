@@ -8,6 +8,7 @@ html {
 
 body {
   height: -webkit-fill-avaliable;
+  background-color: #121212;
 }
 
 a, button {
