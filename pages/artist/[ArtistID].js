@@ -58,8 +58,7 @@ export default function ArtistPage() {
     </div>
 
     <div>
-    {!data.singles?.length == 0 && 
-    data.singles.map((elem) => (
+    {!data.ss?.length == 0 && data.ss.map((elem) => (
       <TrackList Name={elem.title} Artist={data.name} Image={elem.thumbnails[elem.thumbnails.length - 1].url} onPlayButton={() => {setTrackData({TrackName: elem.title, ArtistName: data.name, Poster: elem.thumbnails[0].url, YTid: elem.videoId}); setIsPlaying(true);}} />
     ))}
     </div>
@@ -69,8 +68,7 @@ export default function ArtistPage() {
     </div>
     
     <div>
-    {!data.songs?.tracks?.length == 0 && 
-    data.songs.tracks.map((elem) => (
+    {!data.songs?.tracks?.length == 0 && data.songs.tracks.map((elem) => (
       <TrackList Name={elem.title} Artist={elem.artists[0].name} Image={elem.thumbnails[elem.thumbnails.length - 1].url} onPlayButton={() => {setTrackData({TrackName: elem.title, ArtistName: elem.artists[0].name, Poster: elem.thumbnails[0].url, YTid: elem.videoId}); setIsPlaying(true);}} />
     ))}
     </div>
