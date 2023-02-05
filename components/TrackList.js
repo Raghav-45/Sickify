@@ -6,9 +6,11 @@ export const TrackList = ((props) => {
   const Artist = props.Artist
 
   function ArrayToStr(a) {
-    const b = []
-    a.map((e) => b.push(e.name))
-    return b.join(", ")
+    if (typeof(a) == 'object') {
+      const b = []
+      a.map((e) => b.push(e.name))
+      return b.join(", ")
+    } else { return a }
   }
 
   return (
